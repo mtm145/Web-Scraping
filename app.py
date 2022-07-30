@@ -13,7 +13,8 @@ driver = webdriver.Chrome(service=service)
 driver.get("https://www.nfl.com/stats/player-stats/")
 time.sleep(1)
 
-# localização da tag no html da página
+''' localização da tag no html da página pelo XPATH,
+    clicando na tag correspondente a quantidade de Touchdowns a[contains(text(),'TD')]'''
 driver.find_element(
     By.XPATH, "//thead//tr//th//a[contains(text(),'TD')]").click()
 element = driver.find_element(
